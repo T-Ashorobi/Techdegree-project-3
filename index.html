@@ -30,46 +30,48 @@
             <!-- create a css rule to erase the fieldset decoration -->
             <!-- Erasing the border fieldset, i just zero it out. -->
             <legend>Contact Information</legend>
-
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="user-name" placeholder="required">
-
-
-            <label for="email">Email Address</label>
-            <input type="text" id="email" name="user-email" placeholder="required">
-
-
-            <label for="number">Phone Number</label>
-            <input type="text" id="number" name="user-number">
-
-
-            <label for="address">Street Address</label>
-            <input type="text" id="address" name="user-address">
-
-
-            <label for="city">City</label>
-            <input type="text" id="city" name="user-city">
-
-
-            <label for="state">State</label>
-            <select id="state" name="state-select">
-              <optgroup label="States">
-                <option value="">Choose State</option>
-                <option value="New-York">New York</option>
-                <option value="New-Jersey">New Jersery</option>
-                <option value="Nevada">Nevada</option>
-                <option value="Florida">Florida</option>
-                <option value="Texas">Texas</option>
-                <option value="California">California</option>
-                <option value="Washington">Washington</option>
-                <option value="Arizona">Arizona</option>
-              </optgroup>
-            </select>
-
-
-            <label for="zip">Zip Code</label>
-            <input type="text" id="zip" name="user-zip">
-
+            <div class="flex-pair">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="user-name" placeholder="required">
+              <!-- we place each <label> and <input> within a div to help in order for us to use "Flexbox" because flexbox requires a parent container with two or more child elements to be able to affect related items.  -->
+            </div>
+            <div class="flex-pair">
+              <label for="email">Email Address</label>
+              <input type="text" id="email" name="user-email" placeholder="required">
+            </div>
+            <!-- ??? Apparently each [type] is supposed to have a value the same or similar to the [for].??? -->
+            <div class="flex-pair">
+              <label for="number">Phone Number</label>
+              <input type="text" id="number" name="user-number">
+            </div>
+            <div class="flex-pair">
+              <label for="address">Street Address</label>
+              <input type="text" id="address" name="user-address">
+            </div>
+            <div class="flex-pair">
+              <label for="city">City</label>
+              <input type="text" id="city" name="user-city">
+            </div>
+            <div class="flex-pair">
+              <label for="state">State</label>
+              <select id="state" name="state-select">
+                <optgroup label="States">
+                  <option value="">Choose State</option>
+                  <option value="New-York">New York</option>
+                  <option value="New-Jersey">New Jersery</option>
+                  <option value="Nevada">Nevada</option>
+                  <option value="Florida">Florida</option>
+                  <option value="Texas">Texas</option>
+                  <option value="California">California</option>
+                  <option value="Washington">Washington</option>
+                  <option value="Arizona">Arizona</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="flex-pair">
+              <label for="zip">Zip Code</label>
+              <input type="text" id="zip" name="user-zip">
+            </div>
           </fieldset>
         </div>
         <span></span>

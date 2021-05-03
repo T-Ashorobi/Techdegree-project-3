@@ -7,6 +7,10 @@ body {
   
 }
 
+input {
+  border: 1px solid green;
+}
+
 #header {
   text-align: center;
   /* border-bottom: 3px solid black;  */
@@ -49,6 +53,7 @@ h1 {
 form {
   max-width: 450px;
   margin: 0 auto;
+  /* ~TEST~ I probably didn't need to write this since earlier i've already set a max-width in the ".container". I'll see if messing around with this number affects things. ~TEST~ */
 }
 
 
@@ -59,6 +64,7 @@ form {
 }
 
 .pt-1, .pt-2 {
+  /* ~TEST~ The margin portion probably does not need to be here because the way its written was for me to center the form. I think this is probably arleady done due to the .container values. Test and see. ~TEST~ */
   border: 0;
   margin: 0 auto;
   /* border-bottom: 1px black solid; */
@@ -74,7 +80,7 @@ form {
 .pt-1 input, .pt-1 select {
   /* I must be careful. When using ID's they are so strong that even though I write something further down the ID will still override  it. In this case i had prior "#pt-1 and i couldnt change my "user-zip" width to its initial size. Once i changed "pt-1" into a "class selector" then the came about. */
   display: block;
-  margin:5px 0 30px;
+  margin: 5px 0 30px;
   background: #C4CED4;
   height: 50px;
   border: none;
@@ -118,7 +124,10 @@ input[name="user-zip"] {
 } */
 
 /* ?? I dont know how to stack each radio/checkbox item on top of each other instead of having it side by side. This was fixed by breaking each section up with a <div> but how do i do it in CSS?
-??? */
+??? 
+~ Answer ~ One way to do this is to wrap each pair into a <div>.
+~ Answer ~
+*/
 
 /* input, label, textarea {
   display: block;
@@ -145,7 +154,10 @@ textarea {
   background-color: #C4CED4;
   border:none;
   /* text-align: center; */
-  /* ??? I dont know how to get my <textarea> to have the same width  */
+  /* ??? I dont know how to get my <textarea> to have the same width as the button. ??? 
+  ~ Answer ~ I think i fixed this due to the padding that was initially around <fieldset> or the <main>. The issue was that there was more padding around the <textarea> or something. As I made sure the whole body was uniform then the <textarea> and <button> aligned well. ALSO the power of the ID's were messing around with my ablility to make the adjustments, so the adjustment made to keep the <fieldset> uniform with the <button> was much easier to control. 
+  ~ Answer ~
+  */
 }
 
 button[type="button"] {
@@ -166,7 +178,26 @@ footer {
 }
 
 @media (min-width: 768px) {
-  label[for="name"],
+  .pt-1 .flex-pair {
+    display: flex;
+  }
+
+  .pt-1 input, .pt-1 select {
+    flex-grow: 1;
+    flex-basis: 75%;
+    /* The flex grow allows each flex-item to take up space equally (of the input and select) of the room that is available to it. The flex-basis works similar to width property at setting the lengths of an element but this is more for flex items. We want 75% of the width to be taken up. */
+  }
+
+  .pt-1 label {
+    flex-basis: 25%;
+    /* This takes up uniformly the remaining 25% space available. */
+    height: 50px;
+    /* This height is here to match the size of the input fields. */
+    margin: auto 0;
+    /* The margin here align's each item because since we zeroed out the left and right margins we left the browser to calculate the Top and bottom margin which would align the items perfectly.  */
+  }
+  
+  /* label[for="name"],
   label[for="email"],
   label[for="number"],
   label[for="address"],
@@ -175,7 +206,7 @@ footer {
   label[for="zip"] {
     width: initial;
     max-width: 300px;
-  }
+  } */
 
   /* .pt-1 input {
     width: 50%;
