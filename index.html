@@ -25,72 +25,93 @@
   <main>
     <div class="container">
       <form>
-        <fieldset>
-          <!-- create a css rule to erase the fieldset decoration -->
-          <legend>Contact Information</legend>
-          <!-- create a css rule to erase the legend decoration -->
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="user-name">
-          <label for="email">Email Address</label>
-          <input type="text" id="email" name="user-email">
-          <label for="number">Phone Number</label>
-          <input type="text" id="number" name="user-number">
-          <label for="address">Street Address</label>
-          <input type="text" id="address" name="user-address">
-          <label for="city">City</label>
-          <input type="text" id="city" name="user-city">
-          <label for="state">State</label>
-          <select id="state" name="state-select">
-            <optgroup label="States">
-              <option value="">Choose State</option>
-              <option value="New-York">New York</option>
-              <option value="New-Jersey">New Jersery</option>
-              <option value="Nevada">Nevada</option>
-              <option value="Florida">Florida</option>
-              <option value="Texas">Texas</option>
-              <option value="California">California</option>
-              <option value="Washington">Washington</option>
-              <option value="Arizona">Arizona</option>
-            </optgroup>
-          </select>
-          <label for="zip">Zip Code</label>
-          <input type="text" id="zip" name="user-zip">
-        </fieldset>
-        <fieldset>
+        <div class="inside">
+          <fieldset id="pt-1">
+            <!-- create a css rule to erase the fieldset decoration -->
+            <!-- Erasing the border fieldset, i just zero it out. -->
+            <legend>Contact Information</legend>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="user-name">
+
+
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="user-email">
+
+
+            <label for="number">Phone Number</label>
+            <input type="text" id="number" name="user-number">
+
+
+            <label for="address">Street Address</label>
+            <input type="text" id="address" name="user-address">
+
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="user-city">
+
+
+            <label for="state">State</label>
+            <select id="state" name="state-select">
+              <optgroup label="States">
+                <option value="">Choose State</option>
+                <option value="New-York">New York</option>
+                <option value="New-Jersey">New Jersery</option>
+                <option value="Nevada">Nevada</option>
+                <option value="Florida">Florida</option>
+                <option value="Texas">Texas</option>
+                <option value="California">California</option>
+                <option value="Washington">Washington</option>
+                <option value="Arizona">Arizona</option>
+              </optgroup>
+            </select>
+
+
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="user-zip">
+
+          </fieldset>
+        </div>
+        <span></span>
+
+        <fieldset id="pt-2">
           <legend>Newsletter</legend>
-          <p>Select the newsletters you would like to receive!</p>
-          <div>
+          <p>Select the newsletters you would like to receive:</p>
+          <div class="nl">
             <input type="checkbox" id="HTML" name="user-HTML">
-            <label for="HTML">HTML News</label>
+            <label for="HTML" class="in">HTML News</label>
           </div>
-          <div>
+          <div class="nl">
             <input type="checkbox" id="CSS" name="user-CSS">
-            <label for="CSS">CSS News</label>
+            <label for="CSS" class="in">CSS News</label>
           </div>
-          <div>
+          <div class="nl">
             <input type="checkbox" id="JS" name="user-JS">
-            <label for="JS">Javascript News</label>
+            <label for="JS" class="in">Javascript News</label>
           </div>
           <p>Newsletter format</p>
-          <div>
+          <div class="nl">
             <input type="radio" id="html" name="user-html">
-            <label for="html">HTML</label>
+            <label for="html" class="in">HTML</label>
+          </div>
+          <div class="nl">
+            <input type="radio" id="Plain" name="user-Plain">
+            <label for="Plain" class="in">Plain text</label>
           </div>
           <div>
-            <input type="radio" id="Plain" name="user-Plain">
-            <label for="Plain">Plain text</label>
+            <label for="OT">Other topics you'd like to hear about:</label>
+            <textarea id="OT" name="user-OT"></textarea>
           </div>
-          <label for="OT">Other topics you'd like to hear about</label>
-          <textarea id="OT" name="user-OT"></textarea>
         </fieldset>
         <button type="button">Sign Up</button>
       </form>
     </div>
   </main>
+
   <footer>
     <p>Copyright The Code Review</p>
   </footer>
-  </div>
+
 
 </body>
 

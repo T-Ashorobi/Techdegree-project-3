@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+} 
+
+body {
+  line-height: 1.5em;
+  
+}
+
+#header {
+  text-align: center;
+  /* border-bottom: 3px solid black;  */
+  margin-bottom: 5px;
+}
+
+.head {
+  background: #0A2239;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.newsletter {
+  border-bottom: 3px solid green;
+  max-width: 525px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#header:not([class="head"]) {}
+
+.container {
+  max-width: 525px; 
+  margin: 0 auto;
+  padding: 1rem;
+  /* border-top: 1px black solid; */
+  width: 100%;
+}
+
+
+.inside {
+  border-top: 1px solid black;
+  width: 100%;
+  padding-top: 20px;
+}
+
+fieldset {
+  border: 0;
+  margin: 0 auto;
+  border-bottom: 1px black solid;
+  padding-bottom: 15px;
+}
+
+
+h1 {
+  margin: 0;
+}
+
+#pt-1 input, #pt-1 select {
+  display: block;
+  margin:5px 0 30px;
+  background: #C4CED4;
+}
+
+/* #pt-1 label {
+  padding-bottom: 20px;
+} */
+
+/* input, select {
+  background: #C4CED4;
+} */
+
+/* input[type="text"], select[id="state"] {
+  margin:5px 0 30px;
+} */
+
+
+/* #pt-2 label {
+  display: block; 
+}
+
+#pt-2 .in {
+  display: inline;
+} */
+
+/* ?? I dont know how to stack each radio/checkbox item on top of each other instead of having it side by side. This was fixed by breaking each section up with a <div> but how do i do it in CSS?
+??? */
+
+/* input, label, textarea {
+  display: block;
+} */
+#pt-2 legend {
+  padding-top: 20px;
+}
+
+#pt-2 p {
+  margin-bottom: 10px;
+}
+
+div[class="nl"] {
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 100px;
+  width: 100%;
+  max-width: 430px;
+  padding: 0;
+  margin-top: 10px;
+  background-color: #C4CED4;
+  /* ??? I dont know how to get my <textarea> to have the same width  */
+}
+
+button[type="button"] {
+  width: 100%;
+  max-width: 430px;
+  padding: 15px 0;
+  margin-top: 10px;
+  /* margin: 5px 20px; */
+  /* ??? I dont understand why giving the button a margin margin width value makes the screen scrollable from left to right? ???*/
+  border: none;
+  border-radius: 10px;
+  background-color: #78BC61;
+}
+
+footer {
+  text-align: center;
+}
+ 
