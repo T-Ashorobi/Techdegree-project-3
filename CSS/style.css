@@ -13,6 +13,10 @@ body {
   margin-bottom: 5px;
 }
 
+h1 {
+  margin: 0;
+}
+
 .head {
   background: #0A2239;
   margin: 0 auto;
@@ -38,6 +42,15 @@ body {
   width: 100%;
 }
 
+/*
+ I have not targeted the <form> yet. Checking a previous lesson they targetd the <form> and controlled its with. I've been attacking everyting else but the <form> which is probably why I am having some items are not lining up correctly. Below I will try messing around with the <form>. 
+*/ 
+
+form {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
 
 .inside {
   border-top: 1px solid black;
@@ -45,23 +58,43 @@ body {
   padding-top: 20px;
 }
 
-fieldset {
+.pt-1, .pt-2 {
   border: 0;
   margin: 0 auto;
+  /* border-bottom: 1px black solid; */
+  padding: 0 0 15px 0;
+}
+
+
+
+.pt-1 {
   border-bottom: 1px black solid;
-  padding-bottom: 15px;
 }
 
-
-h1 {
-  margin: 0;
-}
-
-#pt-1 input, #pt-1 select {
+.pt-1 input, .pt-1 select {
+  /* I must be careful. When using ID's they are so strong that even though I write something further down the ID will still override  it. In this case i had prior "#pt-1 and i couldnt change my "user-zip" width to its initial size. Once i changed "pt-1" into a "class selector" then the came about. */
   display: block;
   margin:5px 0 30px;
   background: #C4CED4;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
 }
+
+input[placeholder="required"] {
+  text-align: right;
+  padding-right: 10px;
+}
+
+select[id="state"] {
+  padding: 0 5px;
+}
+
+input[name="user-zip"] {
+  width: initial;
+}
+
 
 /* #pt-1 label {
   padding-bottom: 20px;
@@ -90,11 +123,12 @@ h1 {
 /* input, label, textarea {
   display: block;
 } */
-#pt-2 legend {
+
+.pt-2 legend {
   padding-top: 20px;
 }
 
-#pt-2 p {
+.pt-2 p {
   margin-bottom: 10px;
 }
 
@@ -109,6 +143,8 @@ textarea {
   padding: 0;
   margin-top: 10px;
   background-color: #C4CED4;
+  border:none;
+  /* text-align: center; */
   /* ??? I dont know how to get my <textarea> to have the same width  */
 }
 
@@ -116,7 +152,8 @@ button[type="button"] {
   width: 100%;
   max-width: 430px;
   padding: 15px 0;
-  margin-top: 10px;
+  /* text-align: center; */
+  margin: 10px auto;
   /* margin: 5px 20px; */
   /* ??? I dont understand why giving the button a margin margin width value makes the screen scrollable from left to right? ???*/
   border: none;
@@ -126,5 +163,22 @@ button[type="button"] {
 
 footer {
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  label[for="name"],
+  label[for="email"],
+  label[for="number"],
+  label[for="address"],
+  label[for="city"],
+  label[for="state"],
+  label[for="zip"] {
+    width: initial;
+    max-width: 300px;
+  }
+
+  /* .pt-1 input {
+    width: 50%;
+  } */
 }
  
