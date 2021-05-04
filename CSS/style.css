@@ -4,7 +4,7 @@
 
 body {
   line-height: 1.5em;
-  background: #C6D0D2;
+  background: #1A7174;
 }
 
 h1 {
@@ -40,7 +40,7 @@ hr {
   margin: 0 auto;
   padding: 1rem;
   width: 100%;
-  background: white;
+  background: #C4CED4;
   border-radius: 15px;
 }
 
@@ -74,6 +74,10 @@ form {
   padding-top: 20px;
 }
 
+.pt-1 legend {
+  padding-bottom: 20px;
+}
+
 .pt-1, .pt-2 {
   /* 
   ~TEST~ The margin portion probably does not need to be here because the way its written was for me to center the form. I think this is probably arleady done due to the .container values. Test and see. 
@@ -97,7 +101,7 @@ form {
   /* I must be careful. When using ID's they are so strong that even though I write something further down the ID will still override  it. In this case i had prior "#pt-1 and i couldnt change my "user-zip" width to its initial size. Once i changed "pt-1" into a "class selector" then the came about. */
   display: block;
   margin: 5px 0 30px;
-  background: #C4CED4;
+  color: white;
   height: 50px;
   border: none;
   border-radius: 10px;
@@ -105,7 +109,7 @@ form {
 }
 
 .pt-1 input:focus, textarea:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 5px green;
+  box-shadow: 0 0 0 2px white, 0 0 0 5px #5D4E46;
   outline: none;
 }
 
@@ -159,7 +163,7 @@ textarea {
   /* max-width: 430px; */
   padding: 0;
   margin-top: 10px;
-  background-color: #C4CED4;
+  color: white;
   border:none;
   /* text-align: center; */
   /* 
