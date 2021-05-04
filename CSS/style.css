@@ -56,11 +56,14 @@ button {
 }
 
 form {
-  max-width: 450px;
-  margin: 0 auto;
+  /* max-width: 450px;
+  margin: 0 auto; */
   /* 
   ~TEST~ I probably didn't need to write this since earlier i've already set a max-width in the ".container". I'll see if messing around with this number affects things. 
   ~TEST~ 
+  ~ Answer ~ 
+  I did not need to have this here.
+  ~ Answer ~
   */
 }
 
@@ -75,9 +78,12 @@ form {
   /* 
   ~TEST~ The margin portion probably does not need to be here because the way its written was for me to center the form. I think this is probably arleady done due to the .container values. Test and see. 
   ~TEST~ 
+  ~Answer~
+  It does not need to be there. The container values are enough to keep the <form> in place.
+  ~Answer~ 
   */
   border: 0;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 0 0 15px 0;
 }
 
@@ -107,6 +113,9 @@ form {
 /* 
 ??? Im not sure why my transition isn't working within 5 seconds and why I dont see an easing in and or out. Probably could be because im messing with the box-shadow instead of a specific size. And why is only my zip code they only item that responds to this function 
 ??? 
+~Answer~
+Idk if there is a delay or its just my internet but now its workings as I want it to. 
+~Answer~
 */
 
 
@@ -147,7 +156,7 @@ div[class="nl"] {
 textarea {
   height: 100px;
   width: 100%;
-  max-width: 430px;
+  /* max-width: 430px; */
   padding: 0;
   margin-top: 10px;
   background-color: #C4CED4;
@@ -157,7 +166,7 @@ textarea {
   ??? I dont know how to get my <textarea> to have the same width as the button. 
   ??? 
   ~ Answer ~ 
-  I think i fixed this due to the padding that was initially around <fieldset> or the <main>. The issue was that there was more padding around the <textarea> or something. As I made sure the whole body was uniform then the <textarea> and <button> aligned well. ALSO the power of the ID's were messing around with my ablility to make the adjustments, so the adjustment made to keep the <fieldset> uniform with the <button> was much easier to control. 
+  Before to answer this i gave the <textarea> and <button> the same width value of 430px but then there was more space on the right side than the left. To even this out I deleted the 430px and gave both of them a width of 100%. Now since they both are in the <form> container the width will be the same between the two.
   ~ Answer ~
   */
   transition: all 3s;
@@ -165,6 +174,9 @@ textarea {
   /* 
   ??? I dont understand why this [transition] works the way its intended in mobile view but in desktop view it just grows but without a delay. The ease-out portion works well. 
   ??? 
+  ~ Answer ~
+  I dont know how but I guess there is a delay or something but it now works. I guess ill try exiting out of the page and create a new one. 
+  ~ Answer ~
   */
 }
 
@@ -174,7 +186,7 @@ textarea:focus {
 
 button[type="submit"] {
   width: 100%;
-  max-width: 430px;
+  /* max-width: 430px; */
   padding: 15px 0;
   /* text-align: center; */
   margin: 10px auto;
