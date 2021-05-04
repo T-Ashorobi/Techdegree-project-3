@@ -7,17 +7,12 @@ body {
   background: #C6D0D2;
 }
 
-/* label, button {
-  font-family: 'Josefin Sans', sans-serif;
-} */
-
 h1 {
   margin: 0;
 }
 
 #header {
   text-align: center;
-  /* border-bottom: 3px solid black;  */
   margin-bottom: 5px;
 }
 
@@ -40,20 +35,17 @@ hr {
   border: 2px solid black;
 }
 
-/* #header:not([class="head"]) {} */
-
 .container {
   max-width: 525px; 
   margin: 0 auto;
   padding: 1rem;
-  /* border-top: 1px black solid; */
   width: 100%;
   background: white;
   border-radius: 15px;
 }
 
 /*
- I have not targeted the <form> yet. Checking a previous lesson they targetd the <form> and controlled its with. I've been attacking everyting else but the <form> which is probably why I am having some items are not lining up correctly. Below I will try messing around with the <form>. 
+ I have not targeted the <form> yet. Checking a previous lesson the <form> is targeted and its width is controlled. I've been attacking everyting else but the <form> which is probably why I am having some items are not lining up correctly. Below I will try messing around with the <form>. 
 */ 
 
 legend, 
@@ -66,7 +58,10 @@ button {
 form {
   max-width: 450px;
   margin: 0 auto;
-  /* ~TEST~ I probably didn't need to write this since earlier i've already set a max-width in the ".container". I'll see if messing around with this number affects things. ~TEST~ */
+  /* 
+  ~TEST~ I probably didn't need to write this since earlier i've already set a max-width in the ".container". I'll see if messing around with this number affects things. 
+  ~TEST~ 
+  */
 }
 
 
@@ -77,10 +72,12 @@ form {
 }
 
 .pt-1, .pt-2 {
-  /* ~TEST~ The margin portion probably does not need to be here because the way its written was for me to center the form. I think this is probably arleady done due to the .container values. Test and see. ~TEST~ */
+  /* 
+  ~TEST~ The margin portion probably does not need to be here because the way its written was for me to center the form. I think this is probably arleady done due to the .container values. Test and see. 
+  ~TEST~ 
+  */
   border: 0;
   margin: 0 auto;
-  /* border-bottom: 1px black solid; */
   padding: 0 0 15px 0;
 }
 
@@ -103,13 +100,14 @@ form {
 
 .pt-1 input:focus, textarea:focus {
   box-shadow: 0 0 0 2px white, 0 0 0 5px green;
-  /* transition: ease-in-out, width 5s ease-in-out; */
-  /* outline: 4px groove green; */
   outline: none;
 }
 
 
-/* ??? Im not sure why my transition isn't working within 5 seconds and why I dont see an easing in and or out. Probably could be because im messing with the box-shadow instead of a specific size. And why is only my zip code they only item that responds to this function ??? */
+/* 
+??? Im not sure why my transition isn't working within 5 seconds and why I dont see an easing in and or out. Probably could be because im messing with the box-shadow instead of a specific size. And why is only my zip code they only item that responds to this function 
+??? 
+*/
 
 
 
@@ -126,37 +124,13 @@ input[name="user-zip"] {
   width: initial;
 }
 
-
-/* #pt-1 label {
-  padding-bottom: 20px;
-} */
-
-/* input, select {
-  background: #C4CED4;
-} */
-
-/* input[type="text"], select[id="state"] {
-  margin:5px 0 30px;
-} */
-
-
-/* #pt-2 label {
-  display: block; 
-}
-
-#pt-2 .in {
-  display: inline;
-} */
-
-/* ?? I dont know how to stack each radio/checkbox item on top of each other instead of having it side by side. This was fixed by breaking each section up with a <div> but how do i do it in CSS?
+/* 
+??? I dont know how to stack each radio/checkbox item on top of each other instead of having it side by side. This was fixed by breaking each section up with a <div> but how do i do it in CSS?
 ??? 
-~ Answer ~ One way to do this is to wrap each pair into a <div>.
+~ Answer ~ One way to do this is to wrap each pair into a <div>. Or wrap in a <div> and  and use the "flex" property and set the direction value to "column". Then I align-items center and they'll equal out.
 ~ Answer ~
 */
 
-/* input, label, textarea {
-  display: block;
-} */
 
 .pt-2 legend {
   padding-top: 20px;
@@ -179,11 +153,19 @@ textarea {
   background-color: #C4CED4;
   border:none;
   /* text-align: center; */
-  /* ??? I dont know how to get my <textarea> to have the same width as the button. ??? 
-  ~ Answer ~ I think i fixed this due to the padding that was initially around <fieldset> or the <main>. The issue was that there was more padding around the <textarea> or something. As I made sure the whole body was uniform then the <textarea> and <button> aligned well. ALSO the power of the ID's were messing around with my ablility to make the adjustments, so the adjustment made to keep the <fieldset> uniform with the <button> was much easier to control. 
+  /* 
+  ??? I dont know how to get my <textarea> to have the same width as the button. 
+  ??? 
+  ~ Answer ~ 
+  I think i fixed this due to the padding that was initially around <fieldset> or the <main>. The issue was that there was more padding around the <textarea> or something. As I made sure the whole body was uniform then the <textarea> and <button> aligned well. ALSO the power of the ID's were messing around with my ablility to make the adjustments, so the adjustment made to keep the <fieldset> uniform with the <button> was much easier to control. 
   ~ Answer ~
   */
   transition: all 3s;
+
+  /* 
+  ??? I dont understand why this [transition] works the way its intended in mobile view but in desktop view it just grows but without a delay. The ease-out portion works well. 
+  ??? 
+  */
 }
 
 textarea:focus {
@@ -197,7 +179,11 @@ button[type="submit"] {
   /* text-align: center; */
   margin: 10px auto;
   /* margin: 5px 20px; */
-  /* ??? I dont understand why giving the button a margin margin width value makes the screen scrollable from left to right? ???*/
+
+  /* 
+  ??? I dont understand why giving the button a margin margin width value makes the screen scrollable from left to right? 
+  ???
+  */
   outline: none;
   border: none;
   border-radius: 10px;
@@ -213,9 +199,12 @@ footer {
     display: flex;
   }
 
-  /* .pt-1 input, .pt-1 select {
+  /* .pt-1 input, .pt-1 select { */
+
+     /* 
+     ??? when wrote whats above the zip code portion took up the same width as the other input's. I tried to make the adjustment after but the flex-basis was not working at all
+     ??? 
      */
-     /* ??? when wrote whats above the zip code portion took up the same width as the other input's. I tried to make the adjustment after but the flex-basis was not working at all??? */
     input[id="name"],
     input[id="email"],
     input[id="number"],
@@ -230,7 +219,10 @@ footer {
   .flex-pair[id="zip"] {
     flex-grow: 1;
     flex-basis: 100%;
-    /* ???? I dont understand because when i adjust the values here nothing changes at all. Why is this???? */
+    /* 
+    ???? I dont understand because when i adjust the values here nothing changes at all. Why is this
+    ???? 
+    */
   }
 
   .pt-1 label {
@@ -241,20 +233,5 @@ footer {
     margin: auto 0;
     /* The margin here align's each item because since we zeroed out the left and right margins we left the browser to calculate the Top and bottom margin which would align the items perfectly.  */
   }
-  
-  /* label[for="name"],
-  label[for="email"],
-  label[for="number"],
-  label[for="address"],
-  label[for="city"],
-  label[for="state"],
-  label[for="zip"] {
-    width: initial;
-    max-width: 300px;
-  } */
-
-  /* .pt-1 input {
-    width: 50%;
-  } */
 }
  
