@@ -103,14 +103,11 @@ form {
 
 .pt-1 input:focus, textarea:focus {
   box-shadow: 0 0 0 2px white, 0 0 0 5px green;
-  transition: ease-in-out, width 5s ease-in-out;
+  /* transition: ease-in-out, width 5s ease-in-out; */
   /* outline: 4px groove green; */
   outline: none;
 }
 
-.pt-1 input:focus {
-  width: 100px;
-}
 
 /* ??? Im not sure why my transition isn't working within 5 seconds and why I dont see an easing in and or out. Probably could be because im messing with the box-shadow instead of a specific size. And why is only my zip code they only item that responds to this function ??? */
 
