@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Ubuntu:ital,wght@0,500;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="CSS/style.css">
   <title>Techdegree Project 3</title>
 </head>
@@ -25,32 +28,36 @@
   <main>
     <div class="container">
       <form>
+        <hr>
         <div class="inside">
           <fieldset class="pt-1">
             <!-- create a css rule to erase the fieldset decoration -->
             <!-- Erasing the border fieldset, i just zero it out. -->
+
             <legend>Contact Information</legend>
             <div class="flex-pair">
               <label for="name">Full Name</label>
-              <input type="text" id="name" name="user-name" placeholder="required">
+              <input type="text" id="name" name="user-name" placeholder="required" required>
               <!-- we place each <label> and <input> within a div to help in order for us to use "Flexbox" because flexbox requires a parent container with two or more child elements to be able to affect related items.  -->
+              <!-- The attribute [required] will not let a person pass untill that specific field is filled out with the correct information. -->
             </div>
             <div class="flex-pair">
               <label for="email">Email Address</label>
-              <input type="text" id="email" name="user-email" placeholder="required">
+              <input type="email" id="email" name="user-email" placeholder="required" required>
             </div>
-            <!-- ??? Apparently each [type] is supposed to have a value the same or similar to the [for].??? -->
+            <!-- ??? Apparently each [type] is supposed to have a value the same or similar to the [for].???
+            ~ Answer ~ Some [type] values are supposed to be specific. For example [type=email] should not have a value of text because we require the user to type in an email here so we use the [type] value thats specified for it. Check on MDN for the specific types ~ Answer ~ -->
             <div class="flex-pair">
               <label for="number">Phone Number</label>
-              <input type="text" id="number" name="user-number">
+              <input type="tel" id="number" name="user-number" placeholder="(555) 123-4567">
             </div>
             <div class="flex-pair">
               <label for="address">Street Address</label>
-              <input type="text" id="address" name="user-address">
+              <input type="text" id="address" name="user-address" placeholder="555 Treehouse Park North">
             </div>
             <div class="flex-pair">
               <label for="city">City</label>
-              <input type="text" id="city" name="user-city">
+              <input type="text" id="city" name="user-city" placeholder="City">
             </div>
             <div class="flex-pair">
               <label for="state">State</label>
@@ -70,7 +77,7 @@
             </div>
             <div class="flex-pair">
               <label for="zip">Zip Code</label>
-              <input type="text" id="zip" name="user-zip">
+              <input type="text" id="zip" name="user-zip" placeholder="00000">
             </div>
           </fieldset>
         </div>
@@ -97,15 +104,16 @@
             <label for="html" class="in">HTML</label>
           </div>
           <div class="nl">
-            <input type="radio" id="Plain" name="user-Plain">
+            <input type="radio" id="Plain" name="user-html">
             <label for="Plain" class="in">Plain text</label>
+            <!-- With my radio buttons you are only supposed to be able to pick one at a time. If they have different [name] then I can select all the radio buttons, I dont want it this way. To avoid this give each radio button the same [name]. -->
           </div>
           <div>
             <label for="OT">Other topics you'd like to hear about:</label>
             <textarea id="OT" name="user-OT"></textarea>
           </div>
         </fieldset>
-        <button type="button">Sign Up</button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   </main>

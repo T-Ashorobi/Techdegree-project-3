@@ -4,11 +4,15 @@
 
 body {
   line-height: 1.5em;
-  
+  background: #C6D0D2;
 }
 
-input {
-  border: 1px solid green;
+/* label, button {
+  font-family: 'Josefin Sans', sans-serif;
+} */
+
+h1 {
+  margin: 0;
 }
 
 #header {
@@ -17,9 +21,6 @@ input {
   margin-bottom: 5px;
 }
 
-h1 {
-  margin: 0;
-}
 
 .head {
   background: #0A2239;
@@ -30,13 +31,16 @@ h1 {
 }
 
 .newsletter {
-  border-bottom: 3px solid green;
   max-width: 525px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-#header:not([class="head"]) {}
+hr {
+  border: 2px solid black;
+}
+
+/* #header:not([class="head"]) {} */
 
 .container {
   max-width: 525px; 
@@ -44,11 +48,20 @@ h1 {
   padding: 1rem;
   /* border-top: 1px black solid; */
   width: 100%;
+  background: white;
+  border-radius: 15px;
 }
 
 /*
  I have not targeted the <form> yet. Checking a previous lesson they targetd the <form> and controlled its with. I've been attacking everyting else but the <form> which is probably why I am having some items are not lining up correctly. Below I will try messing around with the <form>. 
 */ 
+
+legend, 
+.pt-1 p, 
+.pt-2 p,
+button {
+  font-family: 'Ubuntu', sans-serif;
+}
 
 form {
   max-width: 450px;
@@ -58,7 +71,7 @@ form {
 
 
 .inside {
-  border-top: 1px solid black;
+  border-top: 2px solid black;
   width: 100%;
   padding-top: 20px;
 }
@@ -88,7 +101,22 @@ form {
   width: 100%;
 }
 
-input[placeholder="required"] {
+.pt-1 input:focus, textarea:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 5px green;
+  transition: ease-in-out, width 5s ease-in-out;
+  /* outline: 4px groove green; */
+  outline: none;
+}
+
+.pt-1 input:focus {
+  width: 100px;
+}
+
+/* ??? Im not sure why my transition isn't working within 5 seconds and why I dont see an easing in and or out. Probably could be because im messing with the box-shadow instead of a specific size. And why is only my zip code they only item that responds to this function ??? */
+
+
+
+input[placeholder] {
   text-align: right;
   padding-right: 10px;
 }
@@ -158,9 +186,14 @@ textarea {
   ~ Answer ~ I think i fixed this due to the padding that was initially around <fieldset> or the <main>. The issue was that there was more padding around the <textarea> or something. As I made sure the whole body was uniform then the <textarea> and <button> aligned well. ALSO the power of the ID's were messing around with my ablility to make the adjustments, so the adjustment made to keep the <fieldset> uniform with the <button> was much easier to control. 
   ~ Answer ~
   */
+  transition: all 3s;
 }
 
-button[type="button"] {
+textarea:focus {
+  height: 150px;
+}
+
+button[type="submit"] {
   width: 100%;
   max-width: 430px;
   padding: 15px 0;
@@ -168,6 +201,7 @@ button[type="button"] {
   margin: 10px auto;
   /* margin: 5px 20px; */
   /* ??? I dont understand why giving the button a margin margin width value makes the screen scrollable from left to right? ???*/
+  outline: none;
   border: none;
   border-radius: 10px;
   background-color: #78BC61;
@@ -182,10 +216,24 @@ footer {
     display: flex;
   }
 
-  .pt-1 input, .pt-1 select {
+  /* .pt-1 input, .pt-1 select {
+     */
+     /* ??? when wrote whats above the zip code portion took up the same width as the other input's. I tried to make the adjustment after but the flex-basis was not working at all??? */
+    input[id="name"],
+    input[id="email"],
+    input[id="number"],
+    input[id="address"],
+    input[id="city"],
+    .pt-1 select {  
     flex-grow: 1;
     flex-basis: 75%;
     /* The flex grow allows each flex-item to take up space equally (of the input and select) of the room that is available to it. The flex-basis works similar to width property at setting the lengths of an element but this is more for flex items. We want 75% of the width to be taken up. */
+  }
+
+  .flex-pair[id="zip"] {
+    flex-grow: 1;
+    flex-basis: 100%;
+    /* ???? I dont understand because when i adjust the values here nothing changes at all. Why is this???? */
   }
 
   .pt-1 label {
