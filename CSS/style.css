@@ -111,6 +111,11 @@ form {
 .pt-1 input:focus, textarea:focus {
   box-shadow: 0 0 0 2px white, 0 0 0 5px #5D4E46;
   outline: none;
+  transition: all 3s;
+}
+
+.pt-1 input:focus {
+  height: 150px;
 }
 
 
@@ -173,7 +178,7 @@ textarea {
   Before to answer this i gave the <textarea> and <button> the same width value of 430px but then there was more space on the right side than the left. To even this out I deleted the 430px and gave both of them a width of 100%. Now since they both are in the <form> container the width will be the same between the two.
   ~ Answer ~
   */
-  transition: all 3s;
+  /* transition: all 3s; */
 
   /* 
   ??? I dont understand why this [transition] works the way its intended in mobile view but in desktop view it just grows but without a delay. The ease-out portion works well. 
